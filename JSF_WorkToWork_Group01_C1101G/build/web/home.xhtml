@@ -1,0 +1,474 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:c="http://java.sun.com/jsp/jstl/core">
+    <h:head>
+         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+         <link rel="shortcut icon" href="images/logo W.jpg" />
+        <title>Work to Worker</title>
+        <style>
+            a:link {text-decoration:none;} 
+        </style>
+        <style type="text/css">
+            @font-face {
+                font-family: "jokerman";
+                src: url('font/VIVALDII.TTF') format("truetype");
+            }   
+
+        </style>      
+    </h:head>
+    <h:body style="background-color: #1A3665">
+         <div style="width: 1000px;margin: auto;">
+            <div style="text-align: right;margin-right: 10px;">                
+                <form action= "home.jsp">
+                    <c:set var= "currLang" value="${inputBundle.locale.language}" />
+                    <ul>                    
+                        <li style="display: inline;color: white">
+                            <img src="images/vn.png" width="10" height="10" alt="vietnam"/><input type="submit" name="language"  value="Tiếng Việt" style="border: none;cursor: pointer;background-color: #1A3665;color: white;font-family: Serif;font-size: 101%"/>
+                        </li>
+                        <li style="display: inline;margin-left: 10px;color: white">
+                            <img src="images/uk.png" width="10" height="10" alt="vietnam"/><input type="submit" name="language" value="English" style="border: none;cursor: pointer;background-color: #1A3665;color: white;font-family: Serif;font-size: 101%"/>
+                        </li>
+                    </ul>
+                </form>    
+            </div>
+            <div style="border-top: 5px;border-top-style: solid;border-top-color: white;border-right: 5px;border-right-style: solid;border-right-color: white;border-left: 5px;border-left-style: solid;border-left-color: white;background-image: url('images/Untitled-1.png');height: 400px">
+
+                <ul style="margin-top: -50px">
+
+
+                    <li style="display: inline-block;vertical-align: top;margin-top: 30px;">
+                        <ul style="padding-top: 30px">
+                            <li id="fix1" style="list-style: none;font-size: 50px;font-weight: bold;color: #0099ff;font-style: italic;font-family: jokerman;margin-left: -30px ">
+                                <font style="color: red">Work</font> <font style="color: #604E9D">to</font> <font style="color: blue">Worker</font>  
+                            </li>
+                        </ul>
+                        <ul style="margin-top: -20px">
+                            <li style="list-style: none;margin-left: 0px; font-size: 30px;color: red">
+                                <fmt:message key="global.Weofferyouthe"/>   <font style="font-weight: bold;font-style: italic;font-size: 50px;font-family: jokerman;color: blue"><fmt:message key="global.opportunity"/></font>
+                            </li>
+                        </ul>
+                        <ul style="margin-top: 5px">
+                            <li style="display: inline;font-size: 20px;background-color: #1A3665;padding: 5px 10px 5px 10px"><a href="login.jsp" style="color: white;"><fmt:message key="global.login"/></a></li>
+                            <li style="display: inline;margin-left: 5px;color: white"> or </li>
+                            <li style="display: inline;font-size: 20px;margin-left: 5px;background-color: #1A3665;padding: 5px 10px 5px 10px"><a href="signup.jsp" style="color: white;"><fmt:message key="global.signupfree"/></a> </li>
+                        </ul>
+                        <ul style="margin-top: 10px;margin-left: -30px;height: 140px;border-radius: 10px;-moz-border-radius: 10px;width: 600px">
+                            <li style="list-style: none;font-size: 30px;color: #ffffff;padding-top: 10px">
+                                Your opportunity
+                            </li>
+                            <li style="list-style: none;margin-top: 5px">
+                                <s:form theme="simple">
+                                    <ul style="margin-top: 20px">
+                                        <li style="display: inline;margin-left: -35px;">
+                                            <s:select list="#{'Area':'Area','Ha Noi':'Ha Noi','Ho Chi Minh':'Ho Chi Minh','Da Nang':'Da Nang','Hai Phong':'Hai Phong'}" />
+                                        </li>
+                                        <li style="display: inline;margin-left: 27px">
+                                            <s:select list="#{'CNTT':'CNTT','Bat dong san':'Bat dong san','Giao duc - Dao tao':'Giao duc - Dao tao','Hai Phong':'Hai Phong'}" />
+                                        </li>
+                                        <li style="display: inline;margin-left: 27px">
+                                            <s:select list="#{'Excellent':'Excellent','Quite':'Quite','Normal':'Normal'}" />
+                                        </li>
+                                    </ul> 
+                                    <ul>
+                                        <li style="list-style: none;margin-left: 100px;margin-top: 20px">
+                                            <s:submit value="Search" style="border-style: none;font-weight: bold;background-color: #1A3665;color: white;height: 30px;width:100px" />
+                                        </li>
+                                    </ul>
+                                </s:form>
+                            </li>
+                        </ul>
+                        <ul style="margin-top: 84px;margin-left: 10px">
+                            <li style="display: inline;font-weight: bold;font-size: 20px;padding: 5px 65px 5px 65px;background-color: #1A3665;border-top-right-radius: 10px;border-top-left-radius: 10px">
+                                <a href="home.jsp" style="color: white">Home</a>
+                            </li>
+                            <li style="display: inline;font-weight: bold;font-size: 20px;padding: 5px 55px 5px 65px;background-color: #1A3665;border-top-right-radius: 10px;border-top-left-radius: 10px">
+                                <a href="worker.jsp" style="color: white">Worker</a>
+                            </li>
+                            <li style="display: inline;font-weight: bold;font-size: 20px;padding: 5px 65px 5px 65px;background-color: #1A3665;border-top-right-radius: 10px;border-top-left-radius: 10px">
+                                <a href="employment.jsp" style="color: white">Employment</a>
+                            </li>
+                            <li style="display: inline;font-weight: bold;font-size: 20px;padding: 5px 65px 5px 65px;background-color: #1A3665;border-top-right-radius: 10px;border-top-left-radius: 10px">
+                                <a href="" style="color: white">Feed Back</a>
+                            </li>
+
+                        </ul>
+                    </li>
+                </ul>                
+            </div>
+            <div style="background-color: white;margin-top: -9px">
+              
+                <div>
+                    <ul style="width: 700px;;margin-left: 100px;padding-top: 30px">
+                        <li style="list-style: none;background-color: #00C2F3;color: white;font-weight: bold;padding: 5px 0px 5px 30px;font-size: 20px;border-radius: 10px;-moz-border-radius: 10px">
+                            Hot Job Categories
+                        </li>
+                        <li style="display: inline-block;margin-top: 10px;vertical-align: top">
+                            <ul>
+                                <li style="list-style: none"><a href="" style="text-decoration: underline;color: black">Sales</a><font style="color: #FF6600"> (700)</font></li>
+                                <li style="list-style: none;margin-top: 5px"><a href="" style="text-decoration: underline;color: black;">Executive management</a><font style="color: #FF6600"> (700)</font></li>
+                                <li style="list-style: none;margin-top: 5px"><a href="" style="text-decoration: underline;color: black">Accounting/Finance</a><font style="color: #FF6600"> (700)</font></li>
+                            </ul>
+                        </li>
+                        <li style="display: inline-block;margin-top: 10px;vertical-align: top">
+                            <ul>
+                                <li style="list-style: none"><a href="" style="text-decoration: underline;color: black">IT - Software</a><font style="color: #FF6600"> (700)</font></li>
+                                <li style="list-style: none;margin-top: 5px"><a href="" style="text-decoration: underline;color: black;">Production/Process</a><font style="color: #FF6600"> (700)</font></li>
+                                <li style="list-style: none;margin-top: 5px"><a href="" style="text-decoration: underline;color: black">Customer Service</a><font style="color: #FF6600"> (700)</font></li>
+                            </ul>
+                        </li>
+                        <li style="display: inline-block;margin-top: 10px;vertical-align: top">
+                            <ul>
+                                <li style="list-style: none"><a href="" style="text-decoration: underline;color: black">Marketing</a><font style="color: #FF6600"> (700)</font></li>
+                                <li style="list-style: none;margin-top: 5px"><a href="" style="text-decoration: underline;color: black;">Administrative/Clerical</a><font style="color: #FF6600"> (700)</font></li>
+                                <li style="list-style: none;margin-top: 5px"><a href="" style="text-decoration: underline;color: black">Accounting/Auditing</a><font style="color: #FF6600"> (700)</font></li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <ul style="width: 700px;;margin-left: 100px;padding-top: 30px">
+                        <li style="list-style: none;background-color: #00C2F3;color: white;font-weight: bold;padding: 5px 0px 5px 30px;font-size: 20px;border-radius: 10px;-moz-border-radius: 10px">
+                            New Job
+                        </li>
+                        <li style="list-style: none;margin-top: 10px;width: 650px;margin-left: 25px">
+                            <ul style="border: 1px;border-style: solid;border-radius: 10px;-moz-border-radius: 10px;padding: 5px 0px 5px 0px">
+                                <li style="display: inline-block;vertical-align: top;">
+                                    <ul>
+                                        <li style="list-style: none;font-weight: bold;font-size: 110%;color: #FF6600">
+                                            Technical Consultant Team Leader
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%">
+                                            Holcim University
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            IT - Software
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Ha Noi
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            New Grad/Internship
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Full time
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul style="border: 1px;border-style: solid;border-radius: 10px;-moz-border-radius: 10px;padding: 5px 0px 5px 0px;margin-top: 5px">
+                                <li style="display: inline-block;vertical-align: top;">
+                                    <ul>
+                                        <li style="list-style: none;font-weight: bold;font-size: 110%;color: #FF6600">
+                                            Technical Consultant Team Leader
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%">
+                                            Holcim University
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            IT - Software
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Ha Noi
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            New Grad/Internship
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Full time
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul style="border: 1px;border-style: solid;border-radius: 10px;-moz-border-radius: 10px;padding: 5px 0px 5px 0px;margin-top: 5px">
+                                <li style="display: inline-block;vertical-align: top;">
+                                    <ul>
+                                        <li style="list-style: none;font-weight: bold;font-size: 110%;color: #FF6600">
+                                            Technical Consultant Team Leader
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%">
+                                            Holcim University
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            IT - Software
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Ha Noi
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            New Grad/Internship
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Full time
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul style="border: 1px;border-style: solid;border-radius: 10px;-moz-border-radius: 10px;padding: 5px 0px 5px 0px;margin-top: 5px">
+                                <li style="display: inline-block;vertical-align: top;">
+                                    <ul>
+                                        <li style="list-style: none;font-weight: bold;font-size: 110%;color: #FF6600">
+                                            Technical Consultant Team Leader
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%">
+                                            Holcim University
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            IT - Software
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Ha Noi
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            New Grad/Internship
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Full time
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul style="border: 1px;border-style: solid;border-radius: 10px;-moz-border-radius: 10px;padding: 5px 0px 5px 0px;margin-top: 5px">
+                                <li style="display: inline-block;vertical-align: top;">
+                                    <ul>
+                                        <li style="list-style: none;font-weight: bold;font-size: 110%;color: #FF6600">
+                                            Technical Consultant Team Leader
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%">
+                                            Holcim University
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            IT - Software
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Ha Noi
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            New Grad/Internship
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Full time
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul style="border: 1px;border-style: solid;border-radius: 10px;-moz-border-radius: 10px;padding: 5px 0px 5px 0px;margin-top: 5px">
+                                <li style="display: inline-block;vertical-align: top;">
+                                    <ul>
+                                        <li style="list-style: none;font-weight: bold;font-size: 110%;color: #FF6600">
+                                            Technical Consultant Team Leader
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%">
+                                            Holcim University
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            IT - Software
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Ha Noi
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            New Grad/Internship
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Full time
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul style="border: 1px;border-style: solid;border-radius: 10px;-moz-border-radius: 10px;padding: 5px 0px 5px 0px;margin-top: 5px">
+                                <li style="display: inline-block;vertical-align: top;">
+                                    <ul>
+                                        <li style="list-style: none;font-weight: bold;font-size: 110%;color: #FF6600">
+                                            Technical Consultant Team Leader
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%">
+                                            Holcim University
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            IT - Software
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Ha Noi
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            New Grad/Internship
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Full time
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul style="border: 1px;border-style: solid;border-radius: 10px;-moz-border-radius: 10px;padding: 5px 0px 5px 0px;margin-top: 5px">
+                                <li style="display: inline-block;vertical-align: top;">
+                                    <ul>
+                                        <li style="list-style: none;font-weight: bold;font-size: 110%;color: #FF6600">
+                                            Technical Consultant Team Leader
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%">
+                                            Holcim University
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            IT - Software
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Ha Noi
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            New Grad/Internship
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Full time
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul style="border: 1px;border-style: solid;border-radius: 10px;-moz-border-radius: 10px;padding: 5px 0px 5px 0px;margin-top: 5px">
+                                <li style="display: inline-block;vertical-align: top;">
+                                    <ul>
+                                        <li style="list-style: none;font-weight: bold;font-size: 110%;color: #FF6600">
+                                            Technical Consultant Team Leader
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%">
+                                            Holcim University
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            IT - Software
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Ha Noi
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            New Grad/Internship
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Full time
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                            <ul style="border: 1px;border-style: solid;border-radius: 10px;-moz-border-radius: 10px;padding: 5px 0px 5px 0px;margin-top: 5px">
+                                <li style="display: inline-block;vertical-align: top;">
+                                    <ul>
+                                        <li style="list-style: none;font-weight: bold;font-size: 110%;color: #FF6600">
+                                            Technical Consultant Team Leader
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%">
+                                            Holcim University
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            IT - Software
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Ha Noi
+                                        </li>
+                                    </ul>
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <ul>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            New Grad/Internship
+                                        </li>
+                                        <li style="list-style: none;font-size: 90%;margin-top: 3px">
+                                            Full time
+                                        </li>
+                                    </ul>
+                                </li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+                <br>
+                <br>
+            </div>            
+        </div>
+        <div style="color: white; height: 100px;border-radius: 10px;-moz-border-radius: 10px;border: 1px;border-style: solid;border-color: white;margin-top: 20px">
+            <div style="text-align: right; padding-top: 20px;padding-right: 30px">
+                Copyright © by Group 1
+                <br />
+                Project Name : Work to Worker
+                <br />
+                Member in Group : Mr Bùi Hồng Hải , Mr Nguyễn Văn Cường , Mr Nguyễn Nhất Linh , Mr Lưu Thế Thông , Mr Trần Trung Hiếu
+            </div>
+        </div>
+        
+    </h:body>
+</html>
+
