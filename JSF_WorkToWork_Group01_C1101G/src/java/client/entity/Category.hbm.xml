@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 14, 2013 3:06:42 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="client.entity.Category" table="Category" schema="dbo" catalog="Project_Group01">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="categoryName" type="string">
+            <column name="Category_Name" not-null="true" />
+        </property>
+        <set name="recruitmentCategories" inverse="true">
+            <key>
+                <column name="ID_Category" />
+            </key>
+            <one-to-many class="client.entity.RecruitmentCategory" />
+        </set>
+        <set name="cvCategories" inverse="true">
+            <key>
+                <column name="ID_Category" />
+            </key>
+            <one-to-many class="client.entity.CvCategory" />
+        </set>
+    </class>
+</hibernate-mapping>
