@@ -48,6 +48,17 @@ public class Worker  implements java.io.Serializable {
        this.appointments = appointments;
        this.recruitmentToWorkers = recruitmentToWorkers;
     }
+
+    public Worker(Account account, String name, Integer age, Boolean gender, String phone, String address, String email, Boolean status) {
+        this.account = account;
+        this.name = name;
+        this.age = age;
+        this.gender = gender;
+        this.phone = phone;
+        this.address = address;
+        this.email = email;
+        this.status = status;
+    }
    
     public int getId() {
         return this.id;

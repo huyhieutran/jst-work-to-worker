@@ -1,7 +1,8 @@
 <?xml version='1.0' encoding='UTF-8' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
-      xmlns:h="http://java.sun.com/jsf/html">
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
     <h:head>
         <link rel="shortcut icon" href="images/logo W.jpg" />
          <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
@@ -89,7 +90,7 @@
                 <div style="background-color: #E9E9E9;color: black;font-size: 20px;font-weight: bold;padding-left: 80px">
                     Account Infomation
                 </div>
-                <s:form theme="simple" action="workerSignUp">
+                <h:form theme="simple" action="workerSignUp">
                     <div>
                         <ul style="margin-left: 80px">
                             <li style="display: inline-block;vertical-align: top;text-align: right;width: 200px;font-weight: bold;">
@@ -108,9 +109,9 @@
                             </li>
                             <li style="display: inline-block;vertical-align: top">
                                 <ul style="margin-left: -15px"> 
-                                    <li style="list-style: none;"><s:textfield name="username" /></li>
-                                    <li style="list-style: none;" id="detail"><s:textfield name="pass"/></li>
-                                    <li style="list-style: none;" id="detail"><s:textfield name="confirmpass"/></li>
+                                    <li style="list-style: none;"><h:inputText value="#{workerSignUp.acc.useName}" /></li>
+                                    <li style="list-style: none;" id="detail"><h:inputSecret value="#{workerSignUp.acc.password}" /></li>
+                                    <li style="list-style: none;" id="detail"><h:inputSecret value="#{workerSignUp.confirmPass}"/></li>
                                 </ul>
                             </li>
                             <li style="display: inline-block;margin-left: 60px">
@@ -135,26 +136,34 @@
                             </li>
                             <li style="display: inline-block;vertical-align: top;margin-left: -15px">
                                 <ul>
-                                    <li style="list-style: none;"><s:textfield name="fullname"/></li>
+                                    <li style="list-style: none;"><h:inputText value="#{workerSignUp.worker.name}" /></li>
                                     
                                 </ul>
                                 <ul id="detail">
-                                    <li style="display: inline;"><s:radio list="#{'1':'Male'}" theme="simple" name="gender" /></li>
-                                    <li style="display: inline;"><s:radio list="#{'0':'Female'}" theme="simple" name="gender" /></li>
+                                    <li style="display: inline;">
+                                        <h:selectOneRadio value="#{workerSignUp.worker.gender}">
+                                            <f:selectItem itemValue="1" itemLabel="Male" />
+                                        </h:selectOneRadio>
+                                    </li>
+                                    <li style="display: inline;">
+                                        <h:selectOneRadio value="#{workerSignUp.worker.gender}">
+                                            <f:selectItem itemValue="0" itemLabel="Female" />
+                                        </h:selectOneRadio>
+                                    </li>
                                 </ul>
                                 <ul>
-                                    <li style="list-style: none;" id="detail"><s:textfield name="phone"/></li>
-                                    <li style="list-style: none;" id="detail"><s:textfield name="address"/></li>
-                                    <li style="list-style: none;" id="detail"><s:textfield name="email"/></li>
+                                    <li style="list-style: none;" id="detail"><h:inputText value="#{workerSignUp.worker.phone}" /></li>
+                                    <li style="list-style: none;" id="detail"><h:inputText value="#{workerSignUp.worker.address}" /></li>
+                                    <li style="list-style: none;" id="detail"><h:inputText value="#{workerSignUp.worker.email}" /></li>
                                 </ul>
                             </li>
                         </ul>                        
                         <ul style="margin-top: 20px">
-                            <li style="display: inline;margin-left: 140px"><s:submit value="Submit" style="border-style: none;font-weight: bold;background-color: #1A3665;color: white;height: 30px;width:100px" /></li>
-                            <li style="display: inline;margin-left: 30px"><s:reset value="Reset" style="border-style: none;font-weight: bold;background-color: #1A3665;color: white;height: 30px;width:100px" /></li>
+                            <li style="display: inline;margin-left: 140px"><h:commandButton value="Submit" type="submit" style="border-style: none;font-weight: bold;background-color: #1A3665;color: white;height: 30px;width:100px" /></li>
+                            <li style="display: inline;margin-left: 30px"><h:commandButton value="Reset" type="reset" style="border-style: none;font-weight: bold;background-color: #1A3665;color: white;height: 30px;width:100px" /></li>
                         </ul>
                     </div>
-                </s:form>
+                </h:form>
             </div>
             <br>
             <br>
