@@ -1,0 +1,27 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 14, 2013 3:06:42 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="client.entity.Location" table="Location" schema="dbo" catalog="Project_Group01">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <property name="name" type="string">
+            <column name="Name" not-null="true" />
+        </property>
+        <set name="recruitmentLocations" inverse="true">
+            <key>
+                <column name="ID_Location" />
+            </key>
+            <one-to-many class="client.entity.RecruitmentLocation" />
+        </set>
+        <set name="cvLocations" inverse="true">
+            <key>
+                <column name="ID_Location" />
+            </key>
+            <one-to-many class="client.entity.CvLocation" />
+        </set>
+    </class>
+</hibernate-mapping>
