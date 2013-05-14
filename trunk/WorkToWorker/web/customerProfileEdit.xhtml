@@ -1,0 +1,326 @@
+<?xml version='1.0' encoding='UTF-8' ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:h="http://java.sun.com/jsf/html">
+    <h:head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8"/>
+        <link rel="shortcut icon" href="images/logo W.jpg" />
+        <title>Work to Worker</title>
+        <style>
+            a:link {text-decoration:none;}
+            #menudiv2:hover{background-color: #FF6600;color: #1A3665}
+        </style>  
+        <style type="text/css">
+            @font-face {
+                font-family: "jokerman";
+                src: url('font/VIVALDII.TTF') format("truetype");
+            } 
+            @media screen and (-webkit-min-device-pixel-ratio:0)
+            {
+                #fix1 { margin-top: 0px }
+                #logo,#address,#email,#level{margin-top: 22px}
+                #phone, #des{margin-top: 19px}
+                #contact {margin-top: 204px}
+                #check{margin-top: 10px}
+            }
+            @-moz-document url-prefix()
+            {
+                #fix1 { margin-top: -20px }
+                #logo,#address,#email, #level{margin-top:18px}
+                #phone, #des{margin-top: 15px}
+                #contact {margin-top: 200px}
+                #number {margin-top: -3px}
+                #check{margin-top: 25px}
+            }
+        </style>  
+        <script>
+            var i =0;
+            function displayResult1(select,mySelect)
+            {
+
+                var element = document.createElement("input");
+                element.setAttribute("type", "button");
+                element.setAttribute("value", "X");
+                element.setAttribute("name", "button");
+                element.setAttribute("id", "'button"+i+"'");
+                element.setAttribute("onclick", "deleteRow1(this.parentNode.parentNode.rowIndex)");
+                var z=document.getElementById(select).value;
+                if(z!="")
+                {
+                    var tbody = document.getElementById(mySelect).getElementsByTagName("tbody")[0];
+                    var row = document.createElement("tr")
+                    var data1 = document.createElement("td")
+                    data1.appendChild(document.createTextNode(z))
+                    var data2 = document.createElement("td")
+                    data2.appendChild (document.createTextNode("[") )
+                    data2.appendChild (element)
+                    data2.appendChild (document.createTextNode("]") )
+                    row.appendChild(data1)
+                    row.appendChild(data2);
+                    tbody.appendChild(row);
+                    document.getElementById("'button"+i+"'").style.borderStyle="none";
+                    document.getElementById("'button"+i+"'").style.cursor="pointer";
+                    document.getElementById("'button"+i+"'").style.backgroundColor="white";
+                    document.getElementById("'button"+i+"'").style.fontWeight= "bold";
+                    i++
+                }
+            }
+            function deleteRow1(id)
+            {
+                document.getElementById("mySelect1").deleteRow(id);
+            }
+        </script>
+        <script>
+            var i =0;
+            function displayResult2(select,mySelect)
+            {
+
+                var element = document.createElement("input");
+                element.setAttribute("type", "button");
+                element.setAttribute("value", "X");
+                element.setAttribute("name", "button");
+                element.setAttribute("id", "'button"+i+"'");
+                element.setAttribute("onclick", "deleteRow2(this.parentNode.parentNode.rowIndex)");
+                var z=document.getElementById(select).value;
+                if(z!="")
+                {
+                    var tbody = document.getElementById(mySelect).getElementsByTagName("tbody")[0];
+                    var row = document.createElement("tr")
+                    var data1 = document.createElement("td")
+                    data1.appendChild(document.createTextNode(z))
+                    var data2 = document.createElement("td")
+                    data2.appendChild (document.createTextNode("[") )
+                    data2.appendChild (element)
+                    data2.appendChild (document.createTextNode("]") )
+                    row.appendChild(data1)
+                    row.appendChild(data2);
+                    tbody.appendChild(row);
+                    document.getElementById("'button"+i+"'").style.borderStyle="none";
+                    document.getElementById("'button"+i+"'").style.cursor="pointer";
+                    document.getElementById("'button"+i+"'").style.backgroundColor="white";
+                    document.getElementById("'button"+i+"'").style.fontWeight= "bold";
+                    i++
+                }
+            }
+            function deleteRow2(id)
+            {
+                document.getElementById("mySelect2").deleteRow(id);
+            }
+        </script>
+    </h:head>
+    <h:body style="background-color:  #1A3665">
+         <div style="width: 1000px;margin: auto;margin-top: 20px;background-color: white;border-radius: 10px;-moz-border-radius: 10px">
+            <div style="padding-top: 10px">
+                <ul>
+                    <li style="display: inline-block;vertical-align: top">
+                        <ul style="margin-left: 40px">
+                            <li style="list-style: none;font-size: 50px;font-weight: bold;color: #0099ff;font-style: italic;font-family: jokerman " id="fix1">
+                                <font style="color: red">Work</font> <font style="color: #604E9D">to</font> <font style="color: blue">Worker</font>  
+                            </li>
+                        </ul>
+                        <ul style="margin-top: -20px;margin-left: 40px">
+                            <li style="list-style: none;margin-left: 30px; font-size: 30px;color: red">
+                                We offer you the <font style="font-weight: bold;font-style: italic;font-size: 50px;font-family: jokerman;color: blue">opportunity</font>
+                            </li>
+                        </ul>
+                    </li>
+                    <li style="display: inline-block;vertical-align: top;margin-left: 20px">
+                        <img src="images/Logo W.png" width="120" height="90" alt="logo W"/>
+                    </li>
+                    <li style="display: inline-block;vertical-align: top;margin-left: 60px;margin-top: -20px">
+                        <ul>
+                            <li style="display: inline;margin-left: 20px;color: black">
+                                <img src="images/vn.png" width="10" height="10" alt="vietnam"/><input type="submit" value="Tiếng Việt" style="border: none;cursor: pointer;background-color: white;font-family: Serif;font-size: 101%"/>
+                            </li>
+                            <li style="display: inline;margin-left: 10px;color: black">
+                                <img src="images/uk.png" width="10" height="10" alt="vietnam"/><input type="submit" value="English" style="border: none;cursor: pointer;background-color: white;font-family: Serif;font-size: 101%"/>
+                            </li>
+                        </ul>
+                        <ul style="margin-top: 10px">
+                            <li style="display: inline;font-size: 20px"><a href="login.jsp" style="color: red;">Login</a></li>
+                            <li style="display: inline;margin-left: 5px;color: #0099ff"> or </li>
+                            <li style="display: inline;font-size: 20px;margin-left: 5px"><a href="signup.jsp" style="color: red;">Sign Up Free</a> </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>  
+            <div>
+                <ul style="margin-top: 30px;border-bottom: 5px;border-bottom-style: solid;border-bottom-color: #1A3665;text-align: center" >
+                    <li id="menudiv"  style="display: inline;font-weight: bold;font-size: 20px;color: #1A3665;border-left: 1px;border-left-style:  solid;padding-left: 40px;padding-right: 40px">
+                        <a href="home.jsp" style="color: #1A3665">Home</a>
+                    </li>
+                    <li id="menudiv" style="display: inline;font-weight: bold;font-size: 20px;color: #1A3665;border-left: 1px;border-left-style:  solid;padding-left: 40px;">
+                        <a href="worker.jsp" style="color: #1A3665">Worker</a>
+                    </li>
+                    <li id="menudiv" style="display: inline;font-weight: bold;font-size: 20px;padding: 5px 40px 5px 40px;background-color: #1A3665;border-top-right-radius: 10px;border-top-left-radius: 10px;margin-left: 40px">
+                        <a href="employment.jsp" style="color: white">Employment</a>
+                    </li>
+                    <li id="menudiv" style="display: inline;font-weight: bold;font-size: 20px;color: #1A3665;padding-left: 40px;border-right: 1px;border-right-style: solid;padding-right: 40px">
+                        <a href="" style="color: #1A3665">Feed Back</a>
+                    </li>
+                </ul>
+                <ul style="background-color: #1A3665;margin-top: -18px;padding-bottom: 3px;padding-left: 370px">
+                    <li id="menudiv2" style="display: inline;font-weight: bold;font-size: 20px;padding-left: 20px;padding-right: 20px;border-radius: 10px;-moz-border-radius: 10px">
+                        <a href="employment.jsp" style="color: white">Search</a>
+                    </li>
+                    <li id="menudiv2" style="display: inline;font-weight: bold;font-size: 20px;padding-left: 20px;padding-right: 20px;border-radius: 10px;-moz-border-radius: 10px;">
+                        <a href="createCVStep1.jsp" style="color: white">Create Recruitment</a>
+                    </li>
+                    <li id="menudiv2" style="display: inline;font-weight: bold;font-size: 20px;padding-left: 20px;padding-right: 20px;border-radius: 10px;-moz-border-radius: 10px;background-color: #FF6600">
+                        <a href="employment.jsp" style="color: white">Career Center</a>
+                    </li>
+                </ul>
+            </div>
+            <div>
+                <ul style="margin-top: 50px;margin-left: 80px">                    
+                    <li style="display: inline-block;width: 670px;vertical-align: top;margin-left: 40px;border: 1px;border-style: double dashed;border-top-right-radius: 10px;-moz-border-top-left-radius: 10px;-moz-border-top-right-radius: 10px;border-top-left-radius: 10px">
+                        <ul style="margin-top: 20px;text-align: center">
+                            <li style="display: inline;font-size: 20px;font-weight: bold;color: #FF6600">
+                                Title :
+                            </li>
+                            <li style="display: inline">
+                                <s:textfield style="width: 300px"/>
+                            </li>
+                        </ul>
+                        <div style="font-size: 20px;font-weight: bold;border: 1px;border-bottom-style:  dotted;padding : 20px 0px 5px 20px">
+                            <font style="color: #FF6600">Your Information </font>
+                        </div>
+                        <ul style="margin-top: 30px;margin-left: -50px">
+                            <li style="display: inline-block;vertical-align: top;text-align: right;width: 260px;font-weight: bold;">
+                                <ul>
+                                    <li style="list-style: none;">Business name :<font style="color: red"> *</font></li>
+                                    <li style="list-style: none;" id="logo">Logo :  </li>
+                                    <li style="list-style: none;" id="address">Address :<font style="color: red"> *</font></li>
+                                    <li style="list-style: none;" id="phone">Phone :<font style="color: red"> *</font></li>
+                                    <li style="list-style: none;" id="des">Description of your business :<font style="color: red"> *</font></li>
+                                    <li style="list-style: none;" id="contact">Contact Person :<font style="color: red"> *</font></li>
+                                    <li style="list-style: none;" id="email">Email :<font style="color: red"> *</font></li>
+                                </ul>
+                            </li>                        
+                            <li style="display: inline-block;vertical-align: top;margin-left: -15px;">    
+                                <ul>
+                                    <li style="list-style: none;"><s:textfield /></li>
+                                    <li style="list-style: none;margin-top: 15px"><s:file accept="image/jpeg,image/jpg,image/gif,image/png" /></li>                                    
+                                    <li style="list-style: none;margin-top: 15px"><s:textfield /></li>
+                                    <li style="list-style: none;margin-top: 15px"><s:textfield /></li>
+                                    <li style="list-style: none;margin-top: 15px"><s:textarea style="width:300px;height: 200px;resize: none" /></li>
+                                    <li style="list-style: none;margin-top: 15px"><s:textfield /></li>
+                                    <li style="list-style: none;margin-top: 15px"><s:textfield /></li>
+                                </ul>
+                            </li>
+                        </ul> 
+                        <div style="font-size: 20px;font-weight: bold;border: 1px;border-bottom-style:  dotted;padding : 0px 0px 5px 20px;margin-top: 40px">
+                            <font style="color: #FF6600">Recruitment Requirements</font>
+                        </div>
+                        <div>
+                            <ul>
+                                <li style="list-style: none;font-weight: bold;margin-top: 30px;margin-left: 10px">
+                                    Job Category :<font style="color: red">*</font>
+                                </li>                                
+                            </ul>
+                            <ul style="margin-top: 10px">
+                                <li style="display: inline-block">
+                                    <div style="margin-left: 15px;font-size: 80%">
+                                        <s:select name="te" id="select1" list="#{'Accounting/Auditing':'Accounting/Auditing','Industrial Products':'Industrial Products','Accounting/Finance':'Accounting/Finance'}" size="6" style="width: 250px;border: 2px;border-style: solid;border-color: #E9E9E9">
+
+                                        </s:select>
+                                    </div>
+                                </li>
+                                <li style="display: inline-block;margin-left: 20px;vertical-align: top;margin-top: 40px">
+                                    <input type="button" value="" style="background: url('images/iconArrow.gif') no-repeat;border-style: none;height: 19px;width:18px;cursor: pointer" onclick="displayResult1('select1','mySelect1')" />
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <div style="margin-left: 15px;font-size: 80%;width: 250px;height: 105px;border: 2px;border-style: solid;border-color: #E9E9E9;overflow: scroll">
+                                        <table style="width: 100%" id="mySelect1">
+                                            <tr style="color: #FF6600;background-image: url('images/treeTabBg.gif')">
+                                                <th style="text-align: left;width: 75%">Categories</th>
+                                                <th style="">Remove</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <div>
+                            <ul>
+                                <li style="list-style: none;font-weight: bold;margin-top: 30px;margin-left: 10px">
+                                    Work Location :<font style="color: red">*</font>
+                                </li>                                
+                            </ul>
+                            <ul style="margin-top: 10px">
+                                <li style="display: inline-block">
+                                    <div style="margin-left: 15px;font-size: 80%">
+                                        <s:select size="6" id="select2" list="#{'Accounting/Auditing':'Accounting/Auditing','Industrial Products':'Industrial Products','Accounting/Finance':'Accounting/Finance'}" name="test" style="width: 250px;border: 2px;border-style: solid;border-color: #E9E9E9">
+
+                                        </s:select>
+                                    </div>
+                                </li>
+                                <li style="display: inline-block;margin-left: 20px;vertical-align: top;margin-top: 40px">
+                                    <input type="button" value="" style="background: url('images/iconArrow.gif') no-repeat;border-style: none;height: 19px;width:18px;cursor: pointer" onclick="displayResult2('select2','mySelect2')" />
+                                </li>
+                                <li style="display: inline-block;vertical-align: top">
+                                    <div style="margin-left: 15px;font-size: 80%;width: 250px;height: 105px;border: 2px;border-style: solid;border-color: #E9E9E9;overflow: scroll">
+                                        <table style="width: 100%" id="mySelect2">
+                                            <tr style="color: #FF6600;background-image: url('images/treeTabBg.gif');">
+                                                <th style="text-align: left;width: 75%">Categories</th>
+                                                <th style="text-align: right">Remove</th>
+                                            </tr>
+                                        </table>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                        <ul style="margin-top: 30px">
+                            <li style="display: inline-block;vertical-align: top;text-align: right;width: 220px;font-weight: bold;">
+                                <ul>
+                                    <li style="list-style: none;" id="number">Number :</li>
+                                    <li style="list-style: none;" id="level">Job Level :</li>
+                                    <li style="list-style: none;margin-top: 20px">Type of Job :<font style="color: red"> *</font></li>
+                                    <li style="list-style: none;margin-top: 18px">Job Description :<font style="color: red"> *</font></li>
+                                    <li style="list-style: none;margin-top: 200px">Benefits: :<font style="color: red"> *</font></li>
+                                    <li style="list-style: none;margin-top: 200px">Job Requirement :<font style="color: red"> *</font></li>
+                                    <li style="list-style: none;margin-top: 200px">Expired Date :<font style="color: red"> *</font></li>
+                                </ul>
+                            </li>                        
+                            <li style="display: inline-block;vertical-align: top;margin-left: -15px; ">    
+                                <ul>
+                                    <li style="list-style: none;"><s:textfield /></li>
+                                    <li style="list-style: none;margin-top: 15px"><s:textfield /></li>    
+                                    <li style="list-style: none;margin-top: 15px"><s:textfield /></li>
+                                    <li style="list-style: none;margin-top: 15px"><s:textarea style="width:300px;height: 200px;resize: none" /></li>
+                                    <li style="list-style: none;margin-top: 15px"><s:textarea style="width:300px;height: 200px;resize: none" /></li>
+                                    <li style="list-style: none;margin-top: 15px"><s:textarea style="width:300px;height: 200px;resize: none" /></li>
+                                </ul>
+                                <ul id="check">
+                                    <li style="display: inline"><s:select list="#{'1':'1'}" name="dayofB" style="width:50px" /></li>
+                                    <li style="display: inline;"><s:select list="#{'January':'January'}" name="dayofB" style="width:100px" /></li>
+                                    <li style="display: inline;"><s:select list="#{'1988':'1988'}" name="dayofB" style="width:70px" /></li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <ul style="margin-top: 20px;margin-left: 50px;border:1px;border-top-style: dotted;width: 520px">
+                            <div style="margin-top: 20px">
+                                <li style="display: inline;font-size: 20px;background-color: #1A3665;padding: 5px 10px 5px 10px"><a href="" style="color: white;">Reset</a></li>
+                                <li style="display: inline;font-size: 20px;background-color: #1A3665;padding: 5px 10px 5px 10px;margin-left: 360px"><a href="" style="color: white;">Done</a></li>
+                            </div>
+                        </ul>
+                        <br>
+                        <br>
+                    </li>
+                </ul>
+                <br>
+                <br>
+            </div>
+        </div>
+        <div style="color: white; height: 100px;border-radius: 10px;-moz-border-radius: 10px;border: 1px;border-style: solid;border-color: white;margin-top: 20px">
+            <div style="text-align: right; padding-top: 20px;padding-right: 30px">
+                Copyright © by Group 1
+                <br />
+                Project Name : Work to Worker
+                <br />
+                Member in Group : Mr Bùi Hồng Hải , Mr Nguyễn Văn Cường , Mr Nguyễn Nhất Linh , Mr Lưu Thế Thông , Mr Trần Trung Hiếu
+            </div>
+        </div>
+    </h:body>
+</html>
+
