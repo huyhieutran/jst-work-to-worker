@@ -1,0 +1,18 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated May 14, 2013 3:06:42 PM by Hibernate Tools 3.2.1.GA -->
+<hibernate-mapping>
+    <class name="client.entity.RecruitmentToWorker" table="Recruitment_To_Worker" schema="dbo" catalog="Project_Group01">
+        <id name="id" type="int">
+            <column name="ID" />
+            <generator class="identity" />
+        </id>
+        <many-to-one name="worker" class="client.entity.Worker" fetch="select">
+            <column name="ID_Worker" />
+        </many-to-one>
+        <many-to-one name="recruitment" class="client.entity.Recruitment" fetch="select">
+            <column name="ID_Recruitment" />
+        </many-to-one>
+    </class>
+</hibernate-mapping>
